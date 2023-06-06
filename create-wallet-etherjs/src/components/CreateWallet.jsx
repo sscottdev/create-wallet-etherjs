@@ -5,14 +5,14 @@ const CreateWallet = () => {
     const [wallet, setWallet] = useState("");
     const [address, setAddress] = useState("");
     const [publicKey, setPublicKey] = useState("");
-/*    const [privateKey, setPrivateKey] = useState("");*/
+    const [privateKey, setPrivateKey] = useState("")
 
     const createWallet = async () => {
         const newWallet = ethers.Wallet.createRandom();
         setWallet(JSON.stringify(newWallet.mnemonic.phrase));
         setAddress(JSON.stringify(newWallet.address));
         setPublicKey(JSON.stringify(newWallet.publicKey));
-     /*   setPrivateKey(JSON.stringify(newWallet._BaseWallet.privateKey));*/
+        setPrivateKey(JSON.stringify(newWallet.privateKey))
         console.log(newWallet)
     };
 
@@ -26,9 +26,9 @@ const CreateWallet = () => {
                 <h2>Key: {wallet}</h2>
                 <h2>Address: {address}</h2>
                 <h2>Public Key: {publicKey}</h2>
-{/*                <h2>Private Key: {privateKey}</h2>*/}
+                <h2>Private Key: {privateKey}</h2>
 
-            </div>
+            </div>2
         </div>
     );
 };
