@@ -28,7 +28,7 @@ const CreateWallet = () => {
                 <h2>Public Key: {publicKey}</h2>
                 <h2>Private Key: {privateKey}</h2>
 
-            </div>2
+            </div>
         </div>
     );
 };
